@@ -1,0 +1,20 @@
+/* ============================================================
+   alica-preetz.de · lokal gehostete Schriften (latin-Subset)
+   Lora (Headlines/Serif) · Lato (Fließtext/UI) · LaBelleAurore (Akzent-Skript)
+   Aus dem bestehenden Marken-Theme der Kundin übernommen — keine
+   Neu-Lizenzierung nötig. DSGVO: KEINE Verbindung zu Google-/Drittservern.
+   size-adjust-Fallbacks gegen Font-Swap-CLS.
+   ============================================================ */
+
+@font-face{font-family:'Lora';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lora-regular.woff2) format('woff2');}
+@font-face{font-family:'Lora';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/lora-italic.woff2) format('woff2');}
+@font-face{font-family:'Lora';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/lora-700.woff2) format('woff2');}
+@font-face{font-family:'Lora';font-style:italic;font-weight:700;font-display:swap;src:url(fonts/lora-700italic.woff2) format('woff2');}
+@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lato-regular.woff2) format('woff2');}
+@font-face{font-family:'Lato';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/lato-italic.woff2) format('woff2');}
+@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/lato-700.woff2) format('woff2');}
+@font-face{font-family:'LaBelleAurore';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/laBelleAurore-regular.woff2) format('woff2');}
+
+/* Metrik-angepasste System-Fallbacks (Näherung, nicht gemessen — s. OFFENE-FRAGEN QA) */
+@font-face{font-family:'Lora Fallback';src:local('Georgia');size-adjust:104%;ascent-override:88%;descent-override:22%;}
+@font-face{font-family:'Lato Fallback';src:local('Arial');size-adjust:100.5%;ascent-override:96%;descent-override:24%;}
