@@ -1,27 +1,28 @@
 /* Rechtsseiten · Alica Preetz */
 :root{
-  --paper:#fdf9f5; --sand:#f7ece7; --ink:#3a2e2a; --ink-soft:#6b5850;
-  --terra:#c97f6e; --terra-deep:#a95c4c; --gold-deep:#8a6a1f; --night:#2b211c;
-  --line:rgba(58,46,42,.13);
+  --paper:#fdf9f6; --card:#fbf1f1; --ink:#241d1a; --ink-soft:#6b5850;
+  --rose:#e08d8d; --rose-text:#a94f63; --gold-deep:#a9822a; --night:#241d1a;
+  --line:rgba(36,29,26,.12);
   --serif:"Lora","Lora Fallback",Georgia,serif;
   --sans:"Lato","Lato Fallback",Arial,-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
-.legal-nav{background:var(--night);color:#fff;}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.legal-nav{background:#fff;border-bottom:1px solid var(--line);}
 .legal-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;}
-.legal-nav a{color:#fff;text-decoration:none;font-weight:700;}
-.legal-nav b{font-family:var(--serif);font-weight:700;}
+.legal-nav a{color:var(--ink);text-decoration:none;font-weight:700;}
+.legal-nav img{height:36px;width:auto;display:block;}
+.legal-nav .back-link{font-family:var(--sans);font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-text) !important;}
 .wrap{width:min(760px,92vw);margin-inline:auto;}
 main{padding:clamp(40px,8vw,80px) 0;}
-main h1{font-family:var(--serif);font-weight:700;font-size:clamp(30px,5vw,44px);letter-spacing:-.015em;line-height:1.12;}
-main h2{font-family:var(--serif);font-weight:700;font-size:clamp(21px,3vw,26px);margin-top:2.2em;}
+main h1{font-family:var(--sans);font-weight:700;font-size:clamp(28px,5vw,40px);letter-spacing:-.01em;line-height:1.15;color:var(--rose-text);}
+main h2{font-family:var(--sans);font-weight:700;font-size:clamp(19px,3vw,23px);margin-top:2.2em;color:var(--ink);}
 main p,main li{max-width:66ch;margin-top:1em;color:var(--ink-soft);}
 main ul{padding-left:1.3em;}
-main a{color:var(--gold-deep);}
-.badge{display:inline-block;background:var(--sand);border:1px solid var(--line);border-left:3px solid var(--terra);border-radius:12px;padding:16px 20px;margin-top:1.5em;color:var(--ink);}
-.badge b{font-family:var(--serif);}
-.back{display:inline-block;margin-top:2.5em;font-weight:700;}
-footer{background:var(--night);color:rgba(255,255,255,.6);font-size:14px;padding:28px 0;margin-top:40px;}
-footer a{color:#f0d9a6;}
+main a{color:var(--rose-text);}
+.badge{display:inline-block;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--rose);border-radius:12px;padding:16px 20px;margin-top:1.5em;color:var(--ink);}
+.badge b{font-family:var(--sans);}
+.back{display:inline-block;margin-top:2.5em;font-weight:700;font-family:var(--sans);}
+footer{background:var(--night);color:rgba(253,249,246,.6);font-size:14px;padding:28px 0;margin-top:40px;}
+footer a{color:#e6c78a;}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}

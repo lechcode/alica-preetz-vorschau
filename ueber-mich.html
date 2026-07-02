@@ -16,110 +16,93 @@
 <meta property="og:image" content="https://lechcode.github.io/alica-preetz-vorschau/assets/og.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta name="theme-color" content="#2b211c" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232b211c'/%3E%3Ccircle cx='32' cy='24' r='9' fill='none' stroke='%23c97f6e' stroke-width='2.4'/%3E%3Cpath d='M17 50c2-9 8-14 15-14s13 5 15 14' fill='none' stroke='%23a9822a' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
-<link rel="preload" href="assets/fonts/lora-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#fdf9f6" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fdf9f6'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23a94f63'%3EA%3C/text%3E%3C/svg%3E" />
+<link rel="preload" href="assets/fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/lora-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
 :root{
-  --paper:#fdf9f5; --sand:#f7ece7; --shell-line:rgba(58,46,42,.13);
-  --ink:#3a2e2a; --ink-soft:#6b5850; --ink-faint:#96837a;
-  --terra:#c97f6e; --terra-deep:#a95c4c;
-  --gold:#a9822a; --gold-deep:#8a6a1f;
-  --night:#2b211c; --night-soft:#3d2f28;
-  --line:rgba(58,46,42,.13);
-  --serif:"Lora","Lora Fallback",Georgia,serif;
-  --sans:"Lato","Lato Fallback",Arial,-apple-system,sans-serif;
-  --step--1:clamp(13.5px,.3vw + 12.7px,14.5px);
-  --step-0:clamp(16px,.4vw + 15px,17.5px);
-  --step-1:clamp(18px,.65vw + 16.3px,20.5px);
-  --step-2:clamp(21px,1.2vw + 17.8px,25px);
-  --step-3:clamp(25px,2.1vw + 19px,34px);
-  --step-4:clamp(30px,3.5vw + 18px,47px);
-  --step-5:clamp(34px,5vw + 16px,58px);
-  --lh-body:1.65; --lh-relaxed:1.78; --lh-snug:1.14;
+  --paper:#fdf9f6; --card:#fbf1f1; --card-2:#f6efd6;
+  --ink:#241d1a; --ink-soft:#6b5850; --ink-faint:#9c8a81;
+  --rose:#e08d8d; --rose-text:#a94f63; --rose-btn:#c2585c; --rose-btn-hover:#a9444a;
+  --gold:#cfb135; --gold-deep:#a9822a; --night:#241d1a; --line:rgba(36,29,26,.12);
+  --serif:"Lora","Lora Fallback",Georgia,serif; --sans:"Lato","Lato Fallback",Arial,-apple-system,sans-serif;
+  --step--1:clamp(13px,.3vw + 12.2px,14px); --step-0:clamp(16px,.35vw + 15.2px,17px);
+  --step-1:clamp(18px,.5vw + 16.6px,19.5px); --step-2:clamp(20px,.9vw + 17.6px,23px);
+  --step-3:clamp(23px,1.5vw + 19px,29px); --step-4:clamp(27px,2.6vw + 20px,38px); --step-5:clamp(28px,4vw + 18px,46px);
+  --lh-body:1.7; --lh-relaxed:1.8; --lh-snug:1.2;
   --space-1:clamp(8px,1vw,12px); --space-2:clamp(14px,1.6vw,18px); --space-3:clamp(20px,2.4vw,28px);
-  --space-4:clamp(30px,3.8vw,44px); --space-5:clamp(46px,6vw,72px); --space-6:clamp(64px,9vw,116px);
-  --radius:16px; --radius-lg:26px; --radius-pill:999px; --nav-h:68px;
-  --shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 18px 40px -24px rgba(58,46,42,.28);
-  --shadow-lift:0 1px 0 rgba(255,255,255,.65) inset, 0 26px 54px -26px rgba(138,106,31,.35);
-  --ease:cubic-bezier(.22,.61,.36,1); --focus:0 0 0 3px rgba(169,130,42,.5);
+  --space-4:clamp(30px,3.8vw,44px); --space-5:clamp(44px,5.6vw,68px); --space-6:clamp(58px,7.5vw,96px);
+  --radius:16px; --radius-lg:28px; --radius-pill:999px; --nav-h:76px;
+  --shadow-soft:0 18px 40px -22px rgba(224,141,141,.4);
+  --shadow-card:0 1px 0 rgba(255,255,255,.7) inset, 0 24px 50px -28px rgba(36,29,26,.22);
+  --ease:cubic-bezier(.22,.61,.36,1); --focus:0 0 0 3px rgba(169,79,99,.45);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 14px);}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:var(--step-0);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip;}
-h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:var(--lh-snug);letter-spacing:-.01em;color:var(--ink);text-wrap:balance;}
-p{max-width:64ch;}
-a{color:var(--gold-deep);text-decoration:none;}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:var(--step-0);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip;}
+h1,h2,h3{font-family:var(--sans);font-weight:700;line-height:var(--lh-snug);letter-spacing:-.005em;color:var(--ink);text-wrap:balance;}
+p{max-width:62ch;}
+a{color:var(--rose-text);text-decoration:none;}
 a:hover{text-decoration:underline;text-underline-offset:3px;}
 img,svg,picture{display:block;max-width:100%;}
-picture{display:block;}
 :focus-visible{outline:none;box-shadow:var(--focus);border-radius:6px;}
 .wrap{width:min(1120px,92vw);margin-inline:auto;}
 section{padding:var(--space-6) 0;position:relative;}
-.eyebrow{font-weight:700;font-size:var(--step--1);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);display:inline-flex;align-items:center;gap:9px;}
-.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--terra);flex:none;}
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:var(--step--1);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:inline-flex;align-items:center;gap:9px;}
+.eyebrow::before{content:"";width:20px;height:2px;border-radius:2px;background:var(--rose);flex:none;}
 .skip{position:absolute;left:-9999px;top:0;background:var(--night);color:var(--paper);padding:12px 20px;border-radius:0 0 12px 0;z-index:200;font-weight:700;}
 .skip:focus{left:0;}
-.alt{background:var(--sand);}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:var(--radius-pill);font-weight:700;font-size:15px;transition:transform .25s var(--ease),background .25s var(--ease);}
-.btn:hover{text-decoration:none;}
-.btn-primary{background:var(--terra);color:#fff;box-shadow:var(--shadow-lift);}
-.btn-primary:hover{background:var(--terra-deep);transform:translateY(-2px);}
+.alt{background:var(--card);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 30px;border-radius:var(--radius-pill);font-family:var(--sans);font-weight:700;font-size:14.5px;letter-spacing:.03em;text-transform:uppercase;transition:transform .25s var(--ease),background .25s var(--ease),color .25s var(--ease);border:1.5px solid transparent;}
+.btn-primary{background:var(--rose-btn);color:#fff;box-shadow:var(--shadow-soft);}
+.btn-primary:hover{background:var(--rose-btn-hover);transform:translateY(-2px);}
 
-/* NAV (identisch zu index.html) */
-.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:100;display:flex;align-items:center;background:rgba(253,249,245,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);}
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:100;display:flex;align-items:center;background:rgba(253,249,246,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
 .nav .wrap{display:flex;align-items:center;gap:var(--space-3);}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink);}
-.brand:hover{text-decoration:none;}
-.brand b{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:-.01em;}
-.nav-links{display:flex;gap:clamp(14px,2vw,26px);margin-left:auto;align-items:center;}
-.nav-links a{color:var(--ink);font-weight:700;font-size:15px;padding:8px 2px;}
-.nav-links a:hover{color:var(--terra-deep);text-decoration:none;}
-.nav-cta{background:var(--terra);color:#fff !important;padding:11px 20px !important;border-radius:var(--radius-pill);box-shadow:var(--shadow);}
-.nav-cta:hover{background:var(--terra-deep);}
-.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:12px;width:48px;height:48px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
-.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;}
+.brand img{height:40px;width:auto;display:block;}
+.nav-links{display:flex;gap:clamp(16px,2vw,30px);margin-left:auto;align-items:center;}
+.nav-links a{font-family:var(--sans);color:var(--ink);font-weight:700;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;padding:8px 2px;}
+.nav-links a:hover{color:var(--rose-text);text-decoration:none;}
+.nav-cta{background:var(--rose-btn);color:#fff !important;padding:11px 22px !important;border-radius:var(--radius-pill);box-shadow:var(--shadow-soft);}
+.nav-cta:hover{background:var(--rose-btn-hover);}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:12px;width:46px;height:46px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
+.burger span{width:20px;height:2px;background:var(--ink);border-radius:2px;}
 @media (max-width:900px){
-  .nav-links{display:none;position:fixed;inset:0;background:var(--night);flex-direction:column;justify-content:center;align-items:center;gap:28px;}
-  .nav-links a{color:var(--paper) !important;font-size:24px;}
+  .nav-links{display:none;position:fixed;inset:0;background:var(--paper);flex-direction:column;justify-content:center;align-items:center;gap:26px;}
+  .nav-links a{font-size:20px;}
   .menu-open .nav-links{display:flex;}
   .burger{display:flex;z-index:110;}
-  .menu-open .burger span{background:var(--paper);}
 }
 
-/* PAGE-HERO (Unterseiten-Kopf, dunkel) */
-.page-hero{background:var(--night);color:#fff;padding-top:calc(var(--nav-h) + var(--space-5));}
-.page-hero .eyebrow{color:#f0d9a6;}
-.page-hero .eyebrow::before{background:#f0d9a6;}
-.page-hero h1{color:#fff;font-size:var(--step-5);margin-top:var(--space-2);}
-.lead-dark{color:rgba(255,255,255,.85);font-size:var(--step-1);margin-top:var(--space-2);}
+.page-hero{background:var(--card);padding-top:calc(var(--nav-h) + var(--space-5));padding-bottom:var(--space-5);}
+.page-hero h1{color:var(--rose-text);font-size:var(--step-5);margin-top:var(--space-2);}
+.lead-soft{color:var(--ink-soft);font-family:var(--serif);font-size:var(--step-1);margin-top:var(--space-2);}
 
-.narrow-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:var(--space-5);align-items:start;}
-.narrow-grid figure{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lift);aspect-ratio:4/5;position:sticky;top:calc(var(--nav-h) + 20px);}
-.narrow-grid img{width:100%;height:100%;object-fit:cover;}
+.narrow-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--space-5);align-items:start;}
+.narrow-grid figure{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);aspect-ratio:3/4;position:sticky;top:calc(var(--nav-h) + 20px);}
+.narrow-grid img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;}
 .narrow-grid p{color:var(--ink-soft);font-size:var(--step-1);line-height:var(--lh-relaxed);margin-top:1.1em;}
-.quote{font-family:var(--serif);font-style:italic;font-size:var(--step-2);color:var(--terra-deep);margin-top:var(--space-3) !important;line-height:1.4;border-left:3px solid var(--terra);padding-left:20px;}
-@media (max-width:850px){.narrow-grid{grid-template-columns:1fr;}.narrow-grid figure{position:static;}}
+.quote{font-family:var(--serif);font-style:italic;font-size:var(--step-2);color:var(--rose-text);margin-top:var(--space-3) !important;line-height:1.45;border-left:3px solid var(--rose);padding-left:20px;}
+@media (max-width:850px){.narrow-grid{grid-template-columns:1fr;}.narrow-grid figure{position:static;max-width:380px;margin-inline:auto;}}
 
-.fundstueck{font-family:var(--serif);font-style:italic;font-size:var(--step-3);line-height:1.4;color:var(--ink);}
+.fundstueck{font-family:var(--serif);font-style:italic;font-size:var(--step-3);line-height:1.45;color:var(--ink);}
 
-.cta-band{background:linear-gradient(135deg,var(--terra) 0%,var(--gold) 100%);color:#fff;text-align:center;}
-.cta-band h2{color:#fff;font-size:var(--step-4);}
-.cta-band p{color:rgba(255,255,255,.92);margin:var(--space-2) auto 0;font-size:var(--step-1);}
-.cta-band .btn-primary{background:var(--night);margin-top:var(--space-3);}
-.cta-band .btn-primary:hover{background:var(--night-soft);}
+.cta-band{background:linear-gradient(135deg,var(--card) 0%,#f3dad4 100%);text-align:center;}
+.cta-band h2{font-size:var(--step-4);}
+.cta-band p{color:var(--ink-soft);margin:var(--space-2) auto 0;font-size:var(--step-1);}
+.cta-band .btn{margin-top:var(--space-3);}
 
-.site-footer{background:var(--night);color:rgba(253,249,245,.7);padding:var(--space-5) 0 var(--space-3);}
+.site-footer{background:var(--night);color:rgba(253,249,246,.7);padding:var(--space-5) 0 var(--space-3);}
 .site-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--space-4);}
-.site-footer b{color:#fff;font-family:var(--serif);font-size:20px;}
-.site-footer h4{color:#fff;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+.site-footer img{height:34px;filter:brightness(0) invert(1);margin-bottom:10px;}
+.site-footer h4{color:#fff;font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
 .site-footer ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
-.site-footer a{color:rgba(253,249,245,.7);}
-.site-footer a:hover{color:#f0d9a6;}
-.foot-bottom{border-top:1px solid rgba(253,249,245,.14);margin-top:var(--space-4);padding-top:var(--space-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;}
+.site-footer a{color:rgba(253,249,246,.7);}
+.site-footer a:hover{color:var(--gold);}
+.foot-bottom{border-top:1px solid rgba(253,249,246,.14);margin-top:var(--space-4);padding-top:var(--space-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;}
 @media (max-width:700px){.site-footer .wrap{grid-template-columns:1fr;}}
 
 .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease);}
@@ -133,7 +116,7 @@ section{padding:var(--space-6) 0;position:relative;}
 
 <nav class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="index.html"><b>Alica Preetz</b></a>
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Alica Preetz — Inspire Your Soul" width="320" height="165"></a>
     <div class="nav-links" id="navLinks">
       <a href="ueber-mich.html">Über mich</a>
       <a href="coaching.html">Coaching &amp; Kurse</a>
@@ -149,14 +132,14 @@ section{padding:var(--space-6) 0;position:relative;}
     <div class="wrap">
       <span class="eyebrow">Über mich</span>
       <h1>Hey, ich bin Alica.</h1>
-      <p class="lead-dark">Systemische Mindset- &amp; Manifestations-Coachin aus Berlin.</p>
+      <p class="lead-soft">Systemische Mindset- &amp; Manifestations-Coachin aus Berlin.</p>
     </div>
   </section>
 
   <section class="reveal">
     <div class="wrap narrow-grid">
       <figure>
-        <img src="assets/portrait-800.jpg" srcset="assets/portrait-400.jpg 400w, assets/portrait-800.jpg 800w, assets/portrait-1200.jpg 1200w" sizes="(max-width:850px) 80vw, 34vw" alt="Alica Preetz im Portrait" width="800" height="1266" loading="lazy" decoding="async">
+        <img src="assets/portrait-800.jpg" srcset="assets/portrait-400.jpg 400w, assets/portrait-800.jpg 800w, assets/portrait-1600.jpg 1600w" sizes="(max-width:850px) 80vw, 34vw" alt="Alica Preetz lachend im sonnigen Garten" width="800" height="1266" loading="lazy" decoding="async">
       </figure>
       <div>
         <p>Nach dem Studienabschluss stand Alica an einem Punkt, den viele kennen: Die Frage „Was will ich eigentlich? Wer möchte ich sein? Was erfüllt mich richtig?" ließ sie nicht mehr los.</p>
@@ -185,7 +168,7 @@ section{padding:var(--space-6) 0;position:relative;}
 
 <footer class="site-footer">
   <div class="wrap">
-    <div><b>Alica Preetz</b><p style="margin-top:14px;max-width:34ch;color:rgba(253,249,245,.7)">Systemisches Mindset- &amp; Manifestations-Coaching für Frauen. Berlin &amp; online.</p></div>
+    <div><img src="assets/logo.png" alt="Alica Preetz" width="140" height="72"><p style="margin-top:6px;max-width:34ch;color:rgba(253,249,246,.7)">Systemisches Mindset- &amp; Manifestations-Coaching für Frauen. Berlin &amp; online.</p></div>
     <div><h4>Seiten</h4><ul><li><a href="ueber-mich.html">Über mich</a></li><li><a href="coaching.html">Coaching &amp; Kurse</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><h4>Rechtliches &amp; Social</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="https://www.instagram.com/alicapreetz/" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/in/alica-preetz/" rel="noopener">LinkedIn</a></li></ul></div>
   </div>
