@@ -2,15 +2,15 @@
 <!--
   ╔════════════════════════════════════════════════════════════════════╗
   ║  ALICA PREETZ · Systemisches Mindset- & Manifestations-Coaching     ║
-  ║  Mehrseitig (PRAXIS) · gebaut von Lechcode · Single-File je Seite   ║
+  ║  Redesign „Sanfte Autorität" · gebaut von Lechcode · Single-File    ║
   ╠════════════════════════════════════════════════════════════════════╣
-  ║  MODUS: AUFTRAG — Design/Branding an die echte Altseite angelehnt:  ║
-  ║   • Echtes Logo (assets/logo.png), Farben e08d8d/cfb135 verfeinert  ║
-  ║   • Lora = Fließtext, Lato = Headlines/Nav/Buttons (wie Original)   ║
-  ║   • Alttexte übernommen + verbessert, s. _projekt/TEXT-DELTA.md     ║
-  ║   • Kundenfotos der Altseite eingesetzt (Rechte-Check: s. OFFENE)   ║
+  ║  MODUS: AUFTRAG — neues Design-System über bestehende Inhalte:      ║
+  ║   • Palette Elfenbein/Pflaume/Altgold/Rosé (edel, warm, feminin)    ║
+  ║   • Fraunces (Display-Serif) + Jost (UI-Sans), lokal, DSGVO-konform ║
+  ║   • Split-Hero mit echtem Porträt · Kundenfotos (Rechte s. OFFENE)  ║
   ║   • Formular = Web3Forms (Access-Key folgt vom Kunden)              ║
   ║   • noindex bleibt bis Impressum+Datenschutz vom Kunden freigegeben ║
+  ║  TOKEN-SYNC: :root-Block identisch in allen Seiten pflegen!         ║
   ║  Pflege-Stellen: Suche nach "HIER:"                                 ║
   ╚════════════════════════════════════════════════════════════════════╝
 -->
@@ -32,12 +32,12 @@
 <meta property="og:image" content="https://lechcode.github.io/alica-preetz-vorschau/assets/og.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta name="theme-color" content="#fdf9f6" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fdf9f6'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23a94f63'%3EA%3C/text%3E%3C/svg%3E" />
+<meta name="theme-color" content="#f6f0e6" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f6f0e6'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%237c3a50'%3EA%3C/text%3E%3C/svg%3E" />
 <!-- Schriften lokal (DSGVO: keine Verbindung zu Google-Servern) -->
-<link rel="preload" href="assets/fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/lora-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" imagesrcset="assets/hero-800.jpg 800w, assets/hero-1200.jpg 1200w, assets/hero-1600.jpg 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" href="assets/fonts/fraunces-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="assets/portrait-800.jpg 800w, assets/portrait-1600.jpg 1600w" imagesizes="(max-width:900px) 92vw, 460px" fetchpriority="high">
 <link rel="stylesheet" href="assets/fonts.css">
 <script type="application/ld+json">
 {
@@ -45,7 +45,7 @@
   "@type": "ProfessionalService",
   "name": "Alica Preetz Coaching",
   "url": "https://alica-preetz.de/",
-  "image": "https://lechcode.github.io/alica-preetz-vorschau/assets/hero-1200.jpg",
+  "image": "https://lechcode.github.io/alica-preetz-vorschau/assets/portrait-1600.jpg",
   "priceRange": "€€",
   "areaServed": "DE",
   "address": {"@type":"PostalAddress","addressLocality":"Berlin","addressCountry":"DE"},
@@ -53,167 +53,213 @@
 }
 </script>
 <style>
-/* ═══ 1 · TOKENS — an die echte Marke angelehnt: Rosé/Gold/Creme, Lora+Lato ═══ */
+/* ═══ 1 · TOKENS — „Sanfte Autorität": Elfenbein/Pflaume/Altgold/Rosé (identisch auf allen Seiten) ═══ */
 :root{
-  --paper:#fdf9f6; --card:#fbf1f1; --card-2:#f6efd6;
-  --ink:#241d1a; --ink-soft:#6b5850; --ink-faint:#9c8a81;
-  --rose:#e08d8d; --rose-text:#a94f63; --rose-btn:#c2585c; --rose-btn-hover:#a9444a;
-  --gold:#cfb135; --gold-deep:#a9822a;
-  --night:#241d1a;
-  --line:rgba(36,29,26,.12);
-  --serif:"Lora","Lora Fallback",Georgia,serif;
-  --sans:"Lato","Lato Fallback",Arial,-apple-system,sans-serif;
+  --paper:#f6f0e6; --paper-2:#efe6d7; --card:#fdf8f0; --card-2:#f3ead6; --sand:#e7dcc8; --sand-soft:#efe6d5;
+  --ink:#2b2320; --ink-soft:#6f6157; --ink-faint:#8a7c6e;
+  --clay:#b57286; --clay-text:#7c3a50; --clay-btn:#5a2f42; --clay-btn-hover:#452232;
+  --rose:#b57286; --rose-text:#7c3a50; --rose-btn:#5a2f42; --rose-btn-hover:#452232;
+  --gold:#b98f43; --gold-deep:#7c5e2b;
+  --night:#2a2028;
+  --line:rgba(43,35,32,.13); --line-soft:rgba(43,35,32,.07);
+  --serif:"Fraunces","Fraunces Fallback",Georgia,serif;
+  --sans:"Jost","Jost Fallback",Arial,-apple-system,sans-serif;
 
   --step--1:clamp(13px,.3vw + 12.2px,14px);
   --step-0:clamp(16px,.35vw + 15.2px,17px);
   --step-1:clamp(18px,.5vw + 16.6px,19.5px);
-  --step-2:clamp(20px,.9vw + 17.6px,23px);
-  --step-3:clamp(23px,1.5vw + 19px,29px);
-  --step-4:clamp(27px,2.6vw + 20px,38px);
-  --step-5:clamp(28px,4vw + 18px,46px);
-  --lh-body:1.7; --lh-relaxed:1.8; --lh-snug:1.2;
+  --step-2:clamp(21px,.9vw + 18.6px,24px);
+  --step-3:clamp(24px,1.6vw + 19px,31px);
+  --step-4:clamp(29px,2.8vw + 21px,42px);
+  --step-5:clamp(34px,4.6vw + 20px,56px);
+  --lh-body:1.7; --lh-relaxed:1.8; --lh-snug:1.1;
   --space-1:clamp(8px,1vw,12px); --space-2:clamp(14px,1.6vw,18px); --space-3:clamp(20px,2.4vw,28px);
-  --space-4:clamp(30px,3.8vw,44px); --space-5:clamp(44px,5.6vw,68px); --space-6:clamp(58px,7.5vw,96px);
-  --radius:16px; --radius-lg:28px; --radius-pill:999px; --nav-h:76px;
-  --shadow-soft:0 18px 40px -22px rgba(224,141,141,.4);
-  --shadow-card:0 1px 0 rgba(255,255,255,.7) inset, 0 24px 50px -28px rgba(36,29,26,.22);
-  --ease:cubic-bezier(.22,.61,.36,1); --focus:0 0 0 3px rgba(169,79,99,.45);
+  --space-4:clamp(30px,3.8vw,44px); --space-5:clamp(44px,5.6vw,68px); --space-6:clamp(58px,7.5vw,100px);
+  --radius:14px; --radius-lg:26px; --radius-pill:999px; --nav-h:76px;
+  --shadow-soft:0 16px 36px -22px rgba(90,47,66,.42);
+  --shadow-card:0 24px 60px -34px rgba(43,35,32,.34);
+  --ease:cubic-bezier(.22,.61,.36,1); --focus:0 0 0 3px rgba(90,47,66,.42);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 14px);}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
-body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:var(--step-0);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip;}
-h1,h2,h3{font-family:var(--sans);font-weight:700;line-height:var(--lh-snug);letter-spacing:-.005em;color:var(--ink);text-wrap:balance;}
-p{max-width:62ch;}
-a{color:var(--rose-text);text-decoration:none;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:var(--step-0);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip;}
+h1,h2,h3{font-family:var(--serif);font-optical-sizing:auto;font-weight:400;line-height:var(--lh-snug);letter-spacing:-.01em;color:var(--ink);text-wrap:balance;}
+p{max-width:64ch;}
+a{color:var(--clay-text);text-decoration:none;}
 a:hover{text-decoration:underline;text-underline-offset:3px;}
 img,svg,picture{display:block;max-width:100%;}
-picture{display:block;}
-::selection{background:rgba(224,141,141,.3);}
+::selection{background:rgba(190,110,82,.24);}
 :focus-visible{outline:none;box-shadow:var(--focus);border-radius:6px;}
-.wrap{width:min(1120px,92vw);margin-inline:auto;}
+.wrap{width:min(1140px,92vw);margin-inline:auto;}
 section{padding:var(--space-6) 0;position:relative;}
-.sec-head{max-width:58ch;margin-bottom:var(--space-5);}
+.alt{background:var(--paper-2);}
+.sec-head{max-width:60ch;margin-bottom:var(--space-5);}
 .sec-head.center{margin-inline:auto;text-align:center;}
 .sec-head.center .eyebrow{justify-content:center;}
 .sec-head h2{font-size:var(--step-4);margin-top:var(--space-2);}
 .sec-head p{font-size:var(--step-1);line-height:var(--lh-relaxed);color:var(--ink-soft);margin-top:var(--space-3);}
-.eyebrow{font-family:var(--sans);font-weight:700;font-size:var(--step--1);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:inline-flex;align-items:center;gap:9px;}
-.eyebrow::before{content:"";width:20px;height:2px;border-radius:2px;background:var(--rose);flex:none;}
-.skip{position:absolute;left:-9999px;top:0;background:var(--night);color:var(--paper);padding:12px 20px;border-radius:0 0 12px 0;z-index:200;font-weight:700;}
+.eyebrow{font-family:var(--sans);font-weight:600;font-size:var(--step--1);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);display:inline-flex;align-items:center;gap:10px;}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--clay);flex:none;}
+.skip{position:absolute;left:-9999px;top:0;background:var(--night);color:var(--paper);padding:12px 20px;border-radius:0 0 12px 0;z-index:200;font-weight:600;}
 .skip:focus{left:0;}
-.alt{background:var(--card);}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 30px;border-radius:var(--radius-pill);font-family:var(--sans);font-weight:700;font-size:14.5px;letter-spacing:.03em;text-transform:uppercase;transition:transform .25s var(--ease),background .25s var(--ease),color .25s var(--ease);border:1.5px solid transparent;}
-.btn:hover{text-decoration:none;}
-.btn-primary{background:var(--rose-btn);color:#fff;box-shadow:var(--shadow-soft);}
-.btn-primary:hover{background:var(--rose-btn-hover);transform:translateY(-2px);}
-.btn-ghost{border-color:var(--rose-btn);color:var(--rose-btn);background:#fff;}
-.btn-ghost:hover{background:var(--rose-btn);color:#fff;transform:translateY(-2px);}
 
-/* ═══ 2 · NAV — hell, Logo, wie im Original ═══ */
-.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:100;display:flex;align-items:center;background:rgba(253,249,246,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 30px;border-radius:var(--radius-pill);font-family:var(--sans);font-weight:600;font-size:13.5px;letter-spacing:.11em;text-transform:uppercase;transition:transform .25s var(--ease),background .25s var(--ease),color .25s var(--ease);border:1.5px solid transparent;cursor:pointer;}
+.btn:hover{text-decoration:none;}
+.btn-primary{background:var(--clay-btn);color:#fff;box-shadow:var(--shadow-soft);}
+.btn-primary:hover{background:var(--clay-btn-hover);transform:translateY(-2px);}
+.btn-ghost{border-color:var(--clay-btn);color:var(--clay-btn);background:transparent;}
+.btn-ghost:hover{background:var(--clay-btn);color:#fff;transform:translateY(-2px);}
+
+/* ═══ 2 · NAV ═══ */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:100;display:flex;align-items:center;background:rgba(246,239,228,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft);}
 .nav .wrap{display:flex;align-items:center;gap:var(--space-3);}
 .brand{display:flex;align-items:center;color:var(--ink);}
 .brand:hover{text-decoration:none;}
-.brand img{height:40px;width:auto;display:block;}
-.nav-links{display:flex;gap:clamp(16px,2vw,30px);margin-left:auto;align-items:center;}
-.nav-links a{font-family:var(--sans);color:var(--ink);font-weight:700;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;padding:8px 2px;}
-.nav-links a:hover{color:var(--rose-text);text-decoration:none;}
-.nav-cta{background:var(--rose-btn);color:#fff !important;padding:11px 22px !important;border-radius:var(--radius-pill);box-shadow:var(--shadow-soft);}
-.nav-cta:hover{background:var(--rose-btn-hover);}
+.brand img{height:38px;width:auto;display:block;}
+.nav-links{display:flex;gap:clamp(16px,2vw,32px);margin-left:auto;align-items:center;}
+.nav-links a{font-family:var(--sans);color:var(--ink);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:8px 2px;}
+.nav-links a:hover{color:var(--clay-text);text-decoration:none;}
+.nav-cta{background:var(--clay-btn);color:#fff !important;padding:11px 22px !important;border-radius:var(--radius-pill);font-weight:600;box-shadow:var(--shadow-soft);}
+.nav-cta:hover{background:var(--clay-btn-hover);}
 .burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:12px;width:46px;height:46px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
 .burger span{width:20px;height:2px;background:var(--ink);border-radius:2px;}
 @media (max-width:900px){
   .nav-links{display:none;position:fixed;inset:0;background:var(--paper);flex-direction:column;justify-content:center;align-items:center;gap:26px;}
-  .nav-links a{font-size:20px;}
+  .nav-links a{font-size:19px;}
   .menu-open .nav-links{display:flex;}
   .burger{display:flex;z-index:110;}
 }
 
-/* ═══ 3 · HERO — Bild + überlappende Card (Original-Pattern „BannerText__card") ═══ */
-.hero{padding-top:calc(var(--nav-h) + var(--space-4));}
-.hero-figure{border-radius:var(--radius-lg);overflow:hidden;height:clamp(360px,50vw,560px);box-shadow:var(--shadow-card);}
-.hero-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;}
-.hero-card{background:var(--card);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:clamp(28px,4vw,52px);max-width:640px;margin:clamp(-70px,-6vw,-40px) auto 0 clamp(20px,4vw,64px);position:relative;z-index:2;}
-.hero-card h1{color:var(--rose-text);font-size:var(--step-5);margin-top:var(--space-2);}
-.hero-card .lead{font-family:var(--serif);color:var(--ink-soft);font-size:var(--step-1);line-height:var(--lh-relaxed);margin-top:var(--space-2);max-width:48ch;}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:var(--space-3);}
-@media (max-width:700px){.hero-card{margin-inline:12px;margin-top:-36px;}}
+/* ═══ 3 · HERO — Split: Text + hohes Porträt ═══ */
+.hero{padding-top:calc(var(--nav-h) + var(--space-5));padding-bottom:var(--space-5);}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .78fr;gap:clamp(28px,5vw,72px);align-items:center;}
+.hero h1{font-size:var(--step-5);margin-top:var(--space-3);}
+.hero h1 em{font-style:italic;color:var(--clay-text);}
+.hero .signature{font-family:var(--serif);font-style:italic;font-size:var(--step-2);color:var(--clay-text);margin-top:var(--space-2);letter-spacing:0;}
+.hero .lead{color:var(--ink-soft);font-size:var(--step-1);line-height:var(--lh-relaxed);margin-top:var(--space-3);max-width:46ch;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:var(--space-4);align-items:center;}
+.hero-note{font-size:13.5px;color:var(--ink-faint);margin-top:16px;display:flex;align-items:center;gap:8px;}
+.hero-note::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none;}
+.hero-figure{position:relative;justify-self:center;width:100%;max-width:460px;}
+.hero-figure .disc{position:absolute;right:-18px;top:-18px;width:130px;height:130px;border-radius:50%;background:var(--sand);z-index:0;}
+.hero-figure .ring{position:absolute;left:-16px;bottom:34px;width:78px;height:78px;border-radius:50%;border:1.5px solid var(--gold);z-index:3;}
+.hero-figure figure{position:relative;z-index:2;border-radius:230px 230px 24px 24px;overflow:hidden;aspect-ratio:41/58;box-shadow:var(--shadow-card);}
+.hero-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;}
+.hero-badge{position:absolute;z-index:4;left:-14px;bottom:-14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow-card);display:flex;align-items:center;gap:11px;}
+.hero-badge b{font-family:var(--serif);font-size:22px;color:var(--clay-text);line-height:1;}
+.hero-badge span{font-family:var(--sans);font-size:11.5px;letter-spacing:.04em;color:var(--ink-soft);line-height:1.3;}
+@media (max-width:850px){
+  .hero .wrap{grid-template-columns:1fr;gap:var(--space-4);}
+  .hero-figure{order:-1;max-width:340px;}
+  .hero h1{margin-top:var(--space-2);}
+}
 
-/* ═══ 4 · VERTRAUENSLEISTE — hell statt dunkel ═══ */
-.facts{padding-top:var(--space-5);padding-bottom:var(--space-5);}
+/* ═══ 4 · VERTRAUENSLEISTE ═══ */
 .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3);text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:var(--space-4) 0;}
-.facts b{display:block;font-family:var(--sans);font-size:var(--step-3);color:var(--rose-text);}
-.facts span{display:block;font-size:13.5px;color:var(--ink-faint);margin-top:6px;letter-spacing:.02em;}
-@media (max-width:700px){.facts .wrap{grid-template-columns:repeat(2,1fr);}}
+.facts b{display:block;font-family:var(--serif);font-weight:500;font-size:var(--step-3);color:var(--clay-text);line-height:1;}
+.facts span{display:block;font-size:13px;color:var(--ink-faint);margin-top:9px;letter-spacing:.02em;}
+@media (max-width:700px){.facts .wrap{grid-template-columns:repeat(2,1fr);gap:var(--space-4) var(--space-3);}}
 
 /* ═══ 5 · ÜBER-MICH-TEASER ═══ */
-.about-teaser .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--space-5);align-items:center;}
-.about-teaser figure{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);aspect-ratio:3/4;}
-.about-teaser img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;}
-.about-teaser h2{font-size:var(--step-4);}
-.about-teaser p{color:var(--ink-soft);font-size:var(--step-1);line-height:var(--lh-relaxed);margin-top:var(--space-2);}
-.quote{font-family:var(--serif);font-style:italic;font-size:var(--step-2);color:var(--rose-text);margin-top:var(--space-3);line-height:1.45;border-left:3px solid var(--rose);padding-left:20px;}
-@media (max-width:850px){.about-teaser .wrap{grid-template-columns:1fr;}.about-teaser figure{max-width:380px;margin-inline:auto;}}
+.about .wrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,5vw,68px);align-items:center;}
+.about figure{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);aspect-ratio:4/5;}
+.about figure::after{content:"";position:absolute;left:-16px;bottom:-16px;width:96px;height:96px;border-radius:50%;border:1.5px solid var(--gold);z-index:-1;}
+.about img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;}
+.about h2{font-size:var(--step-4);}
+.about p{color:var(--ink-soft);font-size:var(--step-1);line-height:var(--lh-relaxed);margin-top:var(--space-2);}
+.quote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:var(--step-2);color:var(--clay-text);margin-top:var(--space-3);line-height:1.5;border-left:2px solid var(--clay);padding-left:22px;}
+@media (max-width:850px){.about .wrap{grid-template-columns:1fr;}.about figure{max-width:400px;margin-inline:auto;}}
 
 /* ═══ 6 · ANGEBOTE ═══ */
-.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
-.offer-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-4);box-shadow:0 1px 0 rgba(255,255,255,.7) inset, 0 16px 34px -26px rgba(36,29,26,.18);transition:transform .3s var(--ease),box-shadow .3s var(--ease);}
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);align-items:stretch;}
+.offer-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-4);display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease);}
 .offer-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);}
+.offer-card.featured{border-color:var(--clay);box-shadow:var(--shadow-soft);}
+.offer-card .tag{display:inline-flex;align-self:flex-start;align-items:center;gap:7px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);background:var(--sand-soft);padding:6px 13px;border-radius:var(--radius-pill);margin-bottom:16px;}
+.offer-card.featured .tag{color:#fff;background:var(--clay-btn);}
 .offer-card h3{font-size:var(--step-2);}
-.offer-card .tag{display:inline-block;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);background:var(--card-2);padding:5px 12px;border-radius:var(--radius-pill);margin-bottom:14px;}
-.offer-card p{color:var(--ink-soft);font-size:15.5px;margin-top:10px;}
-.offer-card a.more{display:inline-block;margin-top:16px;font-weight:700;font-family:var(--sans);font-size:14px;}
+.offer-card p{color:var(--ink-soft);font-size:15.5px;margin-top:11px;flex:1;}
+.offer-card a.more{display:inline-block;margin-top:18px;font-weight:600;font-family:var(--sans);font-size:13px;letter-spacing:.03em;text-transform:uppercase;}
 @media (max-width:900px){.offers-grid{grid-template-columns:1fr;}}
 
-/* ═══ 7 · PODCAST — helle Sektion, echtes Cover ═══ */
-.podcast .wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);align-items:center;}
+/* ═══ 6b · PHILOSOPHIE-BAND ═══ */
+.belief{background:var(--sand-soft);text-align:center;}
+.belief .wrap{max-width:900px;}
+.belief .eyebrow{justify-content:center;margin-bottom:var(--space-2);}
+.belief p{font-family:var(--serif);font-style:italic;font-weight:400;font-size:var(--step-4);line-height:1.34;color:var(--ink);max-width:20ch;margin-inline:auto;}
+.belief p b{font-style:italic;font-weight:400;color:var(--clay-text);}
+
+/* ═══ 6c · COMMUNITY-BAND (Rooftop) ═══ */
+.community figure{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);aspect-ratio:16/8;}
+.community img{width:100%;height:100%;object-fit:cover;object-position:50% 36%;}
+.community figcaption{text-align:center;color:var(--ink-soft);font-size:15px;margin-top:var(--space-2);}
+.community figcaption b{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--clay-text);}
+
+/* ═══ 7 · PODCAST ═══ */
+.podcast .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center;}
 .podcast h2{font-size:var(--step-4);}
 .podcast p{color:var(--ink-soft);font-size:var(--step-1);line-height:var(--lh-relaxed);margin-top:var(--space-3);}
+.podcast .rating{display:flex;align-items:center;gap:12px;margin-top:var(--space-3);}
+.podcast .stars{color:var(--gold);font-size:18px;letter-spacing:2px;}
+.podcast .rating span{font-size:14px;color:var(--ink-faint);}
+.pod-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--space-3);}
+.pod-links a{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-pill);padding:10px 18px;font-family:var(--sans);font-weight:500;font-size:13.5px;color:var(--ink);letter-spacing:.02em;}
+.pod-links a:hover{border-color:var(--clay);color:var(--clay-text);text-decoration:none;}
 .podcast figure{aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);}
 .podcast img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;}
 @media (max-width:850px){.podcast .wrap{grid-template-columns:1fr;}.podcast figure{order:-1;}}
 
 /* ═══ 8 · TESTIMONIALS ═══ */
 .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);}
-.testi{background:#fff;border-radius:var(--radius-lg);padding:var(--space-4);border-left:3px solid var(--rose);box-shadow:0 1px 0 rgba(255,255,255,.7) inset, 0 16px 34px -26px rgba(36,29,26,.18);}
-.testi p{font-family:var(--serif);font-style:italic;font-size:var(--step-1);line-height:var(--lh-relaxed);color:var(--ink);}
-.testi cite{display:block;margin-top:16px;font-style:normal;font-weight:700;font-family:var(--sans);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-deep);}
+.testi{background:var(--card);border-radius:var(--radius-lg);padding:var(--space-4);border-top:2px solid var(--clay);box-shadow:0 18px 40px -30px rgba(43,33,28,.3);}
+.testi .mark{font-family:var(--serif);font-size:44px;line-height:.4;color:var(--sand);display:block;height:26px;}
+.testi p{font-family:var(--serif);font-style:italic;font-size:var(--step-1);line-height:1.6;color:var(--ink);}
+.testi cite{display:block;margin-top:18px;font-style:normal;font-weight:600;font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);}
 @media (max-width:800px){.testi-grid{grid-template-columns:1fr;}}
 
 /* ═══ 9 · PRESSE ═══ */
 .press .wrap{text-align:center;}
 .press-list{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:var(--space-3);}
-.press-list span{background:#fff;border:1px solid var(--line);border-radius:var(--radius-pill);padding:10px 20px;font-size:13.5px;font-family:var(--sans);font-weight:700;color:var(--ink-soft);}
+.press-list span{font-family:var(--serif);font-size:18px;color:var(--ink-soft);opacity:.82;padding:6px 6px;}
+.press-list span::after{content:"·";margin-left:14px;color:var(--ink-faint);}
+.press-list span:last-child::after{content:"";}
 
 /* ═══ 10 · FAQ ═══ */
-.faq-list{max-width:740px;margin-inline:auto;display:flex;flex-direction:column;gap:12px;}
-details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;}
-summary{cursor:pointer;font-weight:700;font-family:var(--sans);font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-list{max-width:760px;margin-inline:auto;display:flex;flex-direction:column;gap:12px;}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;}
+summary{cursor:pointer;font-weight:500;font-family:var(--sans);font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink);}
 summary::-webkit-details-marker{display:none;}
-summary::after{content:"+";font-size:24px;color:var(--rose-text);flex:none;transition:transform .25s var(--ease);}
+summary::after{content:"+";font-family:var(--sans);font-size:24px;color:var(--clay-text);flex:none;transition:transform .25s var(--ease);}
 details[open] summary::after{transform:rotate(45deg);}
 details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
 
 /* ═══ 11 · KONTAKT-CTA ═══ */
-.cta-band{background:linear-gradient(135deg,var(--card) 0%,#f3dad4 100%);text-align:center;}
-.cta-band h2{font-size:var(--step-4);}
-.cta-band p{color:var(--ink-soft);margin:var(--space-2) auto 0;font-size:var(--step-1);}
-.cta-band .btn{margin-top:var(--space-3);}
+.cta-band{background:var(--night);color:#f6efe4;text-align:center;}
+.cta-band .eyebrow{color:var(--gold);justify-content:center;}
+.cta-band .eyebrow::before{background:var(--gold);}
+.cta-band h2{color:#f9f3ea;font-size:var(--step-4);margin-top:14px;}
+.cta-band p{color:rgba(246,239,228,.78);margin:var(--space-2) auto 0;font-size:var(--step-1);max-width:52ch;}
+.cta-band .btn{margin-top:var(--space-4);}
+.cta-band .btn-primary{background:#f6efe4;color:var(--ink);box-shadow:0 16px 40px -24px rgba(0,0,0,.6);}
+.cta-band .btn-primary:hover{background:#fff;transform:translateY(-2px);}
 
 /* ═══ 12 · FOOTER ═══ */
-.site-footer{background:var(--night);color:rgba(253,249,246,.7);padding:var(--space-5) 0 var(--space-3);}
-.site-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--space-4);}
-.site-footer img{height:34px;filter:brightness(0) invert(1);margin-bottom:10px;}
-.site-footer h4{color:#fff;font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+.site-footer{background:var(--night);color:rgba(246,239,228,.68);padding:var(--space-5) 0 var(--space-3);border-top:1px solid rgba(246,239,228,.1);}
+.site-footer .wrap{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--space-4);}
+.site-footer .f-brand{font-family:var(--serif);font-size:24px;color:#f6efe4;letter-spacing:.01em;}
+.site-footer p{margin-top:10px;max-width:34ch;color:rgba(246,239,228,.62);font-size:14.5px;}
+.site-footer h4{color:#fff;font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
 .site-footer ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
-.site-footer a{color:rgba(253,249,246,.7);}
+.site-footer a{color:rgba(246,239,228,.68);font-size:14.5px;}
 .site-footer a:hover{color:var(--gold);}
-.foot-bottom{border-top:1px solid rgba(253,249,246,.14);margin-top:var(--space-4);padding-top:var(--space-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;}
-@media (max-width:700px){.site-footer .wrap{grid-template-columns:1fr;}}
+.foot-bottom{border-top:1px solid rgba(246,239,228,.12);margin-top:var(--space-4);padding-top:var(--space-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:rgba(246,239,228,.6);}
+.foot-bottom a{color:rgba(246,239,228,.6);}
+@media (max-width:700px){.site-footer .wrap{grid-template-columns:1fr;gap:var(--space-3);}}
 
 /* ═══ 13 · REVEAL / MOTION ═══ */
-.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease);}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
 .js .reveal.in{opacity:1;transform:none;}
 .foto .reveal{opacity:1 !important;transform:none !important;}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1 !important;transform:none !important;transition:none !important;}}
@@ -228,6 +274,7 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
     <div class="nav-links" id="navLinks">
       <a href="ueber-mich.html">Über mich</a>
       <a href="coaching.html">Coaching &amp; Kurse</a>
+      <a href="index.html#podcast">Podcast</a>
       <a href="index.html#faq">FAQ</a>
       <a href="kontakt.html" class="nav-cta">Erstgespräch sichern</a>
     </div>
@@ -241,18 +288,26 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
 
   <section class="hero">
     <div class="wrap">
-      <div class="hero-figure">
-        <picture>
-          <img src="assets/hero-1200.jpg" srcset="assets/hero-1600.jpg 1600w, assets/hero-1200.jpg 1200w, assets/hero-800.jpg 800w, assets/hero-400.jpg 400w" sizes="(max-width:900px) 92vw, 1120px" alt="Alica Preetz, Mindset- und Manifestations-Coach, lächelnd vor einer mediterranen Kachelwand" width="1600" height="1283" fetchpriority="high" decoding="async">
-        </picture>
-      </div>
-      <div class="hero-card">
-        <span class="eyebrow">Systemisches Coaching für Frauen · Berlin</span>
-        <h1>Create a life you can't wait to wake up to.</h1>
-        <p class="lead">Mindset- &amp; Manifestations-Coaching für Frauen, die spüren: da ist noch mehr. Lass uns gemeinsam herausfinden, wer du wirklich bist – und wohin du als Nächstes willst.</p>
+      <div class="hero-text">
+        <span class="eyebrow">Mindset- &amp; Manifestations-Coaching · Berlin &amp; online</span>
+        <h1>Erschaffe ein Leben, auf das du dich <em>morgens freust.</em></h1>
+        <p class="signature">Create a life you can't wait to wake up to.</p>
+        <p class="lead">Systemisches Coaching für Frauen, die spüren: da ist noch mehr. Ehrlich, ruhig und Schritt für Schritt zurück zu dir – und weiter zu dem, was dich wirklich erfüllt.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="kontakt.html">Kostenloses Erstgespräch</a>
           <a class="btn btn-ghost" href="coaching.html">Meine Angebote</a>
+        </div>
+        <p class="hero-note">Kostenlos &amp; unverbindlich · Antwort meist innerhalb eines Tages</p>
+      </div>
+      <div class="hero-figure">
+        <span class="disc" aria-hidden="true"></span>
+        <span class="ring" aria-hidden="true"></span>
+        <figure>
+          <img src="assets/portrait-800.jpg" srcset="assets/portrait-400.jpg 400w, assets/portrait-800.jpg 800w, assets/portrait-1600.jpg 1600w" sizes="(max-width:850px) 84vw, 460px" alt="Alica Preetz, Mindset- und Manifestations-Coachin, lachend im sonnigen Garten" width="800" height="1266" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="hero-badge">
+          <b>5,0<span style="font-size:14px">★</span></b>
+          <span>Podcast<br>„Inspire Your Soul"</span>
         </div>
       </div>
     </div>
@@ -261,18 +316,16 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
   <section class="facts">
     <div class="wrap">
       <div><b>seit 2021</b><span>Coaching hauptberuflich</span></div>
-      <div><b>[KLÄREN]</b><span>begleitete Klientinnen <!-- HIER: Kunde nennt einheitliche, belegbare Zahl (INVENTAR 3.4/3.5, OFFENE-FRAGEN #14) --></span></div>
-      <div><b>wöchentlich</b><span>neue Podcast-Folge</span></div>
-      <div><b>100&nbsp;%</b><span>eigene Handschrift, kein Baukasten</span></div>
+      <div><b>150+</b><span>begleitete Frauen <!-- HIER: Zahl vom Kunden bestätigen (Recherche: 150+ seit 2021, OFFENE-FRAGEN #14) --></span></div>
+      <div><b>100+</b><span>Podcast-Folgen</span></div>
+      <div><b>5,0&nbsp;★</b><span>Podcast-Bewertung <!-- HIER: Quelle Rephonic/Apple, 180+ Stimmen — vom Kunden bestätigen lassen --></span></div>
     </div>
   </section>
 
-  <section class="about-teaser reveal">
+  <section class="about reveal">
     <div class="wrap">
       <figure>
-        <picture>
-          <img src="assets/portrait-800.jpg" srcset="assets/portrait-400.jpg 400w, assets/portrait-800.jpg 800w, assets/portrait-1600.jpg 1600w" sizes="(max-width:850px) 70vw, 34vw" alt="Alica Preetz lachend, Hände im Haar, im sonnigen Garten" width="800" height="1266" loading="lazy" decoding="async">
-        </picture>
+        <img src="assets/hero-800.jpg" srcset="assets/hero-400.jpg 400w, assets/hero-800.jpg 800w, assets/hero-1200.jpg 1200w" sizes="(max-width:850px) 84vw, 40vw" alt="Alica Preetz sitzend in Meditation vor einer mediterranen Kachelwand" width="800" height="641" loading="lazy" decoding="async">
       </figure>
       <div>
         <span class="eyebrow">Über mich</span>
@@ -298,7 +351,7 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
           <p>Einzelcoaching mit bi-wöchentlichen Calls und Support zwischen den Sessions. Für alle, die ihre „Lebensversion" noch nicht gefunden haben.</p>
           <a class="more" href="coaching.html#coaching">Details ansehen →</a>
         </div>
-        <div class="offer-card">
+        <div class="offer-card featured">
           <span class="tag">Gruppen- &amp; Hybrid-Programm</span>
           <h3>EVOLVE</h3>
           <p>Das ganzheitliche Coaching-Programm für Frauen, die bereit sind, alte Muster zu durchbrechen und ihr authentisches Ich in Führung zu bringen.</p>
@@ -314,21 +367,44 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
     </div>
   </section>
 
-  <section class="podcast reveal">
+  <section class="belief reveal">
     <div class="wrap">
-      <div>
-        <span class="eyebrow">Podcast</span>
-        <h2>Inspire Your Soul</h2>
-        <p>Willkommen beim Podcast, der dich zurück zu dir führt. Jeden Mittwoch erwarten dich Meditationen, Coaching-Inputs, ehrliche Interviews und Geschichten aus Alicas eigenem Leben – für deine persönliche, berufliche und spirituelle Weiterentwicklung.</p>
-        <a class="btn btn-ghost" style="margin-top:24px" href="https://alica-preetz.de/blog/" rel="noopener">Zum Podcast <!-- HIER: Ziel-Plattform-Link vom Kunden ergänzen --></a>
-      </div>
+      <span class="eyebrow">Woran ich glaube</span>
+      <p>Deine innere Welt erschafft deine <b>äußere Welt.</b></p>
+    </div>
+  </section>
+
+  <section class="community reveal">
+    <div class="wrap">
       <figure>
-        <img src="assets/podcast-800.jpg" srcset="assets/podcast-400.jpg 400w, assets/podcast-800.jpg 800w, assets/podcast-1200.jpg 1200w" sizes="(max-width:850px) 80vw, 40vw" alt="Alica Preetz am Podcast-Mikrofon, Cover „Inspire Your Soul mit Alica Preetz"" width="800" height="600" loading="lazy" decoding="async">
+        <img src="assets/rooftop-800.jpg" srcset="assets/rooftop-400.jpg 400w, assets/rooftop-800.jpg 800w, assets/rooftop-1600.jpg 1600w" sizes="(max-width:900px) 92vw, 1140px" alt="Alica Preetz mit Frauen ihrer Community bei einem Event in Berlin" width="1600" height="1096" loading="lazy" decoding="async">
+        <figcaption>Du gehst den Weg nicht allein: <b>eine warme Gemeinschaft von Frauen</b>, die gemeinsam wachsen.</figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="alt reveal">
+  <section class="podcast alt reveal" id="podcast">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Podcast</span>
+        <h2>Inspire Your Soul</h2>
+        <p>Willkommen beim Podcast, der dich zurück zu dir führt. Jeden Mittwoch erwarten dich Meditationen, Coaching-Inputs, ehrliche Interviews und Geschichten aus meinem eigenen Leben – für deine persönliche, berufliche und spirituelle Weiterentwicklung.</p>
+        <div class="rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>5,0 aus 180+ Bewertungen <!-- HIER: Quelle Rephonic — vom Kunden bestätigen --></span>
+        </div>
+        <div class="pod-links">
+          <a href="https://open.spotify.com/show/7uq3xogqAya5Xo2GjvMiGQ" rel="noopener">Auf Spotify hören</a>
+          <a href="https://podcasts.apple.com/de/podcast/inspire-your-soul-mit-alica-preetz/id1737586889" rel="noopener">Auf Apple Podcasts</a>
+        </div>
+      </div>
+      <figure>
+        <img src="assets/podcast-800.jpg" srcset="assets/podcast-400.jpg 400w, assets/podcast-800.jpg 800w, assets/podcast-1200.jpg 1200w" sizes="(max-width:850px) 84vw, 46vw" alt="Alica Preetz am Podcast-Mikrofon, Cover „Inspire Your Soul mit Alica Preetz“" width="800" height="600" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="reveal">
     <div class="wrap">
       <div class="sec-head center">
         <span class="eyebrow">Client Love</span>
@@ -336,18 +412,20 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
       </div>
       <div class="testi-grid">
         <div class="testi">
-          <p>„In gerade mal acht Wochen habe ich mein ganzes Leben auf den Kopf gestellt! Vor dem Coaching mit Alica hätte ich nicht mal ansatzweise gedacht, dass ich das überhaupt in einem Jahr schaffen könnte."</p>
+          <span class="mark" aria-hidden="true">„</span>
+          <p>In gerade mal acht Wochen habe ich mein ganzes Leben auf den Kopf gestellt! Vor dem Coaching mit Alica hätte ich nicht mal ansatzweise gedacht, dass ich das überhaupt in einem Jahr schaffen könnte.</p>
           <cite>Jaqueline L.</cite>
         </div>
         <div class="testi">
-          <p>„Das Coaching mit Alica war eine wunderschöne Reise mit dem Ziel, bei mir selbst anzukommen."</p>
+          <span class="mark" aria-hidden="true">„</span>
+          <p>Das Coaching mit Alica war eine wunderschöne Reise mit dem Ziel, bei mir selbst anzukommen.</p>
           <cite>Sonja P.</cite>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="press reveal">
+  <section class="press alt reveal">
     <div class="wrap">
       <div class="sec-head center">
         <span class="eyebrow">Bekannt aus</span>
@@ -358,12 +436,12 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
         <span>LOOX Online</span>
         <span>The Big Talk</span>
         <span>VAHA Flow</span>
-        <!-- HIER: Presselogos statt Textchips ergänzen, sobald hochauflösende Originale vom Kunden vorliegen -->
+        <!-- HIER: Presselogos statt Textnamen ergänzen, sobald hochauflösende Originale vom Kunden vorliegen -->
       </div>
     </div>
   </section>
 
-  <section class="alt reveal" id="faq">
+  <section class="reveal" id="faq">
     <div class="wrap">
       <div class="sec-head center">
         <span class="eyebrow">FAQ</span>
@@ -400,8 +478,8 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
 
   <section class="cta-band reveal">
     <div class="wrap">
-      <span class="eyebrow" style="justify-content:center">Bereit?</span>
-      <h2 style="margin-top:14px">Bereit für den ersten Schritt?</h2>
+      <span class="eyebrow">Bereit?</span>
+      <h2>Bereit für den ersten Schritt?</h2>
       <p>Lass uns in einem kostenlosen Erstgespräch herausfinden, was du gerade brauchst.</p>
       <a class="btn btn-primary" href="kontakt.html">Kostenloses Erstgespräch sichern</a>
     </div>
@@ -412,8 +490,8 @@ details p{margin-top:14px;color:var(--ink-soft);line-height:var(--lh-relaxed);}
 <footer class="site-footer">
   <div class="wrap">
     <div>
-      <img src="assets/logo.png" alt="Alica Preetz" width="140" height="72">
-      <p style="margin-top:6px;max-width:34ch;color:rgba(253,249,246,.7)">Systemisches Mindset- &amp; Manifestations-Coaching für Frauen. Berlin &amp; online.</p>
+      <div class="f-brand">Alica Preetz</div>
+      <p>Systemisches Mindset- &amp; Manifestations-Coaching für Frauen. Berlin &amp; online.</p>
     </div>
     <div>
       <h4>Seiten</h4>

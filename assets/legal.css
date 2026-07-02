@@ -1,28 +1,29 @@
-/* Rechtsseiten · Alica Preetz */
+/* Rechtsseiten · Alica Preetz · „Sanfte Autorität" (synchron zu den Hauptseiten) */
 :root{
-  --paper:#fdf9f6; --card:#fbf1f1; --ink:#241d1a; --ink-soft:#6b5850;
-  --rose:#e08d8d; --rose-text:#a94f63; --gold-deep:#a9822a; --night:#241d1a;
-  --line:rgba(36,29,26,.12);
-  --serif:"Lora","Lora Fallback",Georgia,serif;
-  --sans:"Lato","Lato Fallback",Arial,-apple-system,sans-serif;
+  --paper:#f6f0e6; --card:#fdf8f0; --ink:#2b2320; --ink-soft:#6f6157;
+  --rose:#b57286; --rose-text:#7c3a50; --gold-deep:#7c5e2b; --night:#2a2028;
+  --line:rgba(43,35,32,.13);
+  --serif:"Fraunces","Fraunces Fallback",Georgia,serif;
+  --sans:"Jost","Jost Fallback",Arial,-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
 .legal-nav{background:#fff;border-bottom:1px solid var(--line);}
 .legal-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;}
-.legal-nav a{color:var(--ink);text-decoration:none;font-weight:700;}
+.legal-nav a{color:var(--ink);text-decoration:none;font-weight:600;}
 .legal-nav img{height:36px;width:auto;display:block;}
 .legal-nav .back-link{font-family:var(--sans);font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-text) !important;}
 .wrap{width:min(760px,92vw);margin-inline:auto;}
 main{padding:clamp(40px,8vw,80px) 0;}
-main h1{font-family:var(--sans);font-weight:700;font-size:clamp(28px,5vw,40px);letter-spacing:-.01em;line-height:1.15;color:var(--rose-text);}
-main h2{font-family:var(--sans);font-weight:700;font-size:clamp(19px,3vw,23px);margin-top:2.2em;color:var(--ink);}
+main h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5vw,44px);letter-spacing:-.01em;line-height:1.12;color:var(--rose-text);}
+main h2{font-family:var(--serif);font-weight:500;font-size:clamp(20px,3vw,25px);margin-top:2.2em;color:var(--ink);}
 main p,main li{max-width:66ch;margin-top:1em;color:var(--ink-soft);}
 main ul{padding-left:1.3em;}
 main a{color:var(--rose-text);}
+.small{font-size:14px;color:var(--ink-soft);}
 .badge{display:inline-block;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--rose);border-radius:12px;padding:16px 20px;margin-top:1.5em;color:var(--ink);}
-.badge b{font-family:var(--sans);}
-.back{display:inline-block;margin-top:2.5em;font-weight:700;font-family:var(--sans);}
-footer{background:var(--night);color:rgba(253,249,246,.6);font-size:14px;padding:28px 0;margin-top:40px;}
+.badge b{font-family:var(--sans);font-weight:600;}
+.back{display:inline-block;margin-top:2.5em;font-weight:600;font-family:var(--sans);}
+footer{background:var(--night);color:rgba(246,240,230,.6);font-size:14px;padding:28px 0;margin-top:40px;}
 footer a{color:#e6c78a;}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}

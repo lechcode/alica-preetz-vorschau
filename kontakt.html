@@ -16,34 +16,37 @@
 <meta property="og:image" content="https://lechcode.github.io/alica-preetz-vorschau/assets/og.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta name="theme-color" content="#fdf9f6" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fdf9f6'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23a94f63'%3EA%3C/text%3E%3C/svg%3E" />
-<link rel="preload" href="assets/fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/lora-regular.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#f6f0e6" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f6f0e6'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-style='italic' text-anchor='middle' fill='%237c3a50'%3EA%3C/text%3E%3C/svg%3E" />
+<link rel="preload" href="assets/fonts/fraunces-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
 :root{
-  --paper:#fdf9f6; --card:#fbf1f1; --card-2:#f6efd6;
-  --ink:#241d1a; --ink-soft:#6b5850; --ink-faint:#9c8a81;
-  --rose:#e08d8d; --rose-text:#a94f63; --rose-btn:#c2585c; --rose-btn-hover:#a9444a;
-  --gold:#cfb135; --gold-deep:#a9822a; --night:#241d1a; --line:rgba(36,29,26,.12);
-  --serif:"Lora","Lora Fallback",Georgia,serif; --sans:"Lato","Lato Fallback",Arial,-apple-system,sans-serif;
+  /* ═ Sanfte Autorität — Elfenbein · Pflaume · Altgold · Rosé (identisch auf allen Seiten) ═ */
+  --paper:#f6f0e6; --paper-2:#efe6d7; --card:#fdf8f0; --card-2:#f3ead6; --sand:#e7dcc8; --sand-soft:#efe6d5;
+  --ink:#2b2320; --ink-soft:#6f6157; --ink-faint:#8a7c6e;
+  --clay:#b57286; --clay-text:#7c3a50; --clay-btn:#5a2f42; --clay-btn-hover:#452232;
+  --rose:#b57286; --rose-text:#7c3a50; --rose-btn:#5a2f42; --rose-btn-hover:#452232;
+  --gold:#b98f43; --gold-deep:#7c5e2b; --night:#2a2028;
+  --line:rgba(43,35,32,.13); --line-soft:rgba(43,35,32,.07);
+  --serif:"Fraunces","Fraunces Fallback",Georgia,serif; --sans:"Jost","Jost Fallback",Arial,-apple-system,sans-serif;
   --step--1:clamp(13px,.3vw + 12.2px,14px); --step-0:clamp(16px,.35vw + 15.2px,17px);
-  --step-1:clamp(18px,.5vw + 16.6px,19.5px); --step-2:clamp(20px,.9vw + 17.6px,23px);
-  --step-3:clamp(23px,1.5vw + 19px,29px); --step-4:clamp(27px,2.6vw + 20px,38px); --step-5:clamp(28px,4vw + 18px,46px);
-  --lh-body:1.7; --lh-relaxed:1.8; --lh-snug:1.2;
+  --step-1:clamp(18px,.5vw + 16.6px,19.5px); --step-2:clamp(21px,.9vw + 18.6px,24px);
+  --step-3:clamp(24px,1.6vw + 19px,31px); --step-4:clamp(29px,2.8vw + 21px,42px); --step-5:clamp(34px,4.6vw + 20px,56px);
+  --lh-body:1.7; --lh-relaxed:1.8; --lh-snug:1.1;
   --space-1:clamp(8px,1vw,12px); --space-2:clamp(14px,1.6vw,18px); --space-3:clamp(20px,2.4vw,28px);
-  --space-4:clamp(30px,3.8vw,44px); --space-5:clamp(44px,5.6vw,68px); --space-6:clamp(58px,7.5vw,96px);
-  --radius:16px; --radius-lg:28px; --radius-pill:999px; --nav-h:76px;
-  --shadow-soft:0 18px 40px -22px rgba(224,141,141,.4);
-  --shadow-card:0 1px 0 rgba(255,255,255,.7) inset, 0 24px 50px -28px rgba(36,29,26,.22);
-  --ease:cubic-bezier(.22,.61,.36,1); --focus:0 0 0 3px rgba(169,79,99,.45);
+  --space-4:clamp(30px,3.8vw,44px); --space-5:clamp(44px,5.6vw,68px); --space-6:clamp(58px,7.5vw,100px);
+  --radius:14px; --radius-lg:26px; --radius-pill:999px; --nav-h:76px;
+  --shadow-soft:0 16px 36px -22px rgba(90,47,66,.42);
+  --shadow-card:0 24px 60px -34px rgba(43,35,32,.34);
+  --ease:cubic-bezier(.22,.61,.36,1); --focus:0 0 0 3px rgba(90,47,66,.42);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 14px);}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
-body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:var(--step-0);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip;}
-h1,h2,h3{font-family:var(--sans);font-weight:700;line-height:var(--lh-snug);letter-spacing:-.005em;color:var(--ink);text-wrap:balance;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:var(--step-0);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip;}
+h1,h2,h3{font-family:var(--serif);font-optical-sizing:auto;font-weight:400;line-height:var(--lh-snug);letter-spacing:-.01em;color:var(--ink);text-wrap:balance;}
 p{max-width:62ch;}
 a{color:var(--rose-text);text-decoration:none;}
 a:hover{text-decoration:underline;text-underline-offset:3px;}
@@ -103,7 +106,7 @@ textarea{resize:vertical;min-height:120px;}
 
 .site-footer{background:var(--night);color:rgba(253,249,246,.7);padding:var(--space-5) 0 var(--space-3);}
 .site-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--space-4);}
-.site-footer img{height:34px;filter:brightness(0) invert(1);margin-bottom:10px;}
+.site-footer .f-brand{font-family:var(--serif);font-size:24px;color:#f6f0e6;letter-spacing:.01em;margin-bottom:8px;}
 .site-footer h4{color:#fff;font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
 .site-footer ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
 .site-footer a{color:rgba(253,249,246,.7);}
@@ -190,7 +193,7 @@ textarea{resize:vertical;min-height:120px;}
 
 <footer class="site-footer">
   <div class="wrap">
-    <div><img src="assets/logo.png" alt="Alica Preetz" width="140" height="72"><p style="margin-top:6px;max-width:34ch;color:rgba(253,249,246,.7)">Systemisches Mindset- &amp; Manifestations-Coaching für Frauen. Berlin &amp; online.</p></div>
+    <div><div class="f-brand">Alica Preetz</div><p style="margin-top:6px;max-width:34ch;color:rgba(246,240,230,.62)">Systemisches Mindset- &amp; Manifestations-Coaching für Frauen. Berlin &amp; online.</p></div>
     <div><h4>Seiten</h4><ul><li><a href="ueber-mich.html">Über mich</a></li><li><a href="coaching.html">Coaching &amp; Kurse</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><h4>Rechtliches &amp; Social</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="https://www.instagram.com/alicapreetz/" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/in/alica-preetz/" rel="noopener">LinkedIn</a></li></ul></div>
   </div>
